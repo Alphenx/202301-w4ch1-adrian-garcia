@@ -7,7 +7,7 @@ const gentelmanData = [
     twitter: "@osbourne",
     picture: "bertin.jpg",
     alternativeText: "Osbourne pointing at you",
-    selected: true,
+    selected: false,
   },
   {
     id: 2,
@@ -27,6 +27,16 @@ const gentelmanData = [
     twitter: "@julius_churchs",
     picture: "julio.jpg",
     alternativeText: "Churchs pointing at you",
+    selected: true,
+  },
+  {
+    id: 4,
+    name: "El mago .pop()",
+    status: "Display daNONE",
+    profession: "Domador de Leones",
+    twitter: "@dieguito_777",
+    picture: "diego.jpeg",
+    alternativeText: "Diego pointing at you",
     selected: true,
   },
 ];
