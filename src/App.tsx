@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Card from "./components/Card/Card";
+import Info from "./components/Info/Info";
+import gentelmanData from "./gentelman.data";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="root">
+      <header className="main-header">
+        <h1 className="main-title">The pointing gentlemen</h1>
       </header>
+      <section className="controls">
+        <Info />
+        <button className="button button--select">Select all</button>
+      </section>
+      <main className="main">
+        <ul className="gentelmen">
+          {gentelmanData.map((gentleman) => (
+            <Card gentelman={gentleman} />
+          ))}
+        </ul>
+      </main>
     </div>
   );
 }
