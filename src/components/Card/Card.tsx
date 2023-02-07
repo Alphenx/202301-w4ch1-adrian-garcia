@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Gentelman from "../../gentelman.model";
 import "./Card.css";
 
@@ -6,8 +6,20 @@ interface CardProps {
   gentelman: Gentelman;
 }
 const Card: FC<CardProps> = ({ gentelman }) => {
+  const [isOn, changeStatus] = useState(false);
+  const toggleStatus = () => {
+    changeStatus(!isOn);
+    gentelman.selected = !isOn;
+    console.log(gentelman.selected);
+  };
+
   return (
-    <li className="gentleman">
+    <li
+      className={`gentleman ${isOn ? "selected" : ""}`}
+      onClick={(e) => {
+        toggleStatus();
+      }}
+    >
       <div className="gentleman__avatar-container">
         <img
           className="gentleman__avatar"
