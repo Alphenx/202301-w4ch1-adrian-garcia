@@ -1,6 +1,6 @@
-import { FC, useState } from "react";
-import Gentelman from "../../gentelman.model";
-import "./Card.css";
+import { FC, useState } from 'react';
+import Gentelman from '../../gentelman.model';
+import './Card.css';
 
 interface CardProps {
   gentelman: Gentelman;
@@ -15,7 +15,7 @@ const Card: FC<CardProps> = ({ gentelman }) => {
 
   return (
     <li
-      className={`gentleman ${isOn ? "selected" : ""}`}
+      className={`gentleman ${isOn ? 'selected' : ''}`}
       onClick={(e) => {
         toggleStatus();
       }}
@@ -38,11 +38,11 @@ const Card: FC<CardProps> = ({ gentelman }) => {
             {gentelman.profession}
           </li>
           <li className="gentleman__data">
-            <span className="gentleman__data-label">Status:</span>{" "}
+            <span className="gentleman__data-label">Status:</span>{' '}
             {gentelman.status}
           </li>
           <li className="gentleman__data">
-            <span className="gentleman__data-label">Twitter:</span>{" "}
+            <span className="gentleman__data-label">Twitter:</span>{' '}
             {gentelman.twitter}
           </li>
         </ul>

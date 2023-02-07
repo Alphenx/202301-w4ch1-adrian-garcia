@@ -1,11 +1,20 @@
+import { useState } from "react";
 import "./App.css";
 import Card from "./components/Card/Card";
 import Info from "./components/Info/Info";
 import gentelmanData from "./gentelman.data";
 
 function App() {
+  const counter = 0;
+
+  const toggleStat = () => {
+    gentelmanData.find((gentleman) =>
+      gentleman.selected ? counter + 1 : counter - 1
+    );
+  };
+
   return (
-    <div className="root">
+    <div className="root" onClick={toggleStat}>
       <header className="main-header">
         <h1 className="main-title">The pointing gentlemen</h1>
       </header>
